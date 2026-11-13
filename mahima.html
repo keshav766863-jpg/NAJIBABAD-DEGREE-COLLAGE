@@ -1,0 +1,547 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Najibabad Degree College</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#f3f7fc;color:#26364a}
+:root{--navy:#082c50;--blue:#087bbd;--gold:#ffc857}
+header{background:var(--navy);color:white;padding:15px 5%;display:flex;align-items:center;gap:15px}
+.logo{width:65px;height:65px;border-radius:50%;object-fit:cover;border:3px solid white}
+header h1{font-size:25px}
+header p{font-size:13px;margin-top:5px}
+nav{background:#075b91;padding:14px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;position:sticky;top:0;z-index:99}
+nav a{color:white;text-decoration:none;font-weight:bold;font-size:14px}
+nav a:hover{color:var(--gold)}
+.marquee{background:var(--gold);padding:12px;overflow:hidden;white-space:nowrap;font-weight:bold;color:#082c50}
+.marquee span{display:inline-block;padding-left:100%;animation:move 20s linear infinite}
+@keyframes move{to{transform:translateX(-100%)}}
+.hero{height:490px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:white;overflow:hidden}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s}
+.slide.active{opacity:1}
+.hero-content{position:relative;z-index:2;background:#061d40a8;padding:35px;border-radius:15px;max-width:800px;margin:15px}
+.hero h2{font-size:42px;margin-bottom:15px}
+.hero p{line-height:1.8}
+button,.btn{background:var(--blue);color:white;padding:11px 19px;border:0;border-radius:7px;cursor:pointer;font-weight:bold;text-decoration:none;display:inline-block;margin:5px}
+button:hover,.btn:hover{background:var(--navy);transform:translateY(-2px)}
+.gold{background:var(--gold);color:#082c50}
+section{padding:55px 6%;scroll-margin-top:65px}
+.heading{text-align:center;font-size:30px;color:#075b91;margin-bottom:30px}
+.about,.panel{background:white;padding:28px;border-radius:14px;box-shadow:0 5px 20px #0001;line-height:1.9}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card{background:white;border-radius:13px;overflow:hidden;box-shadow:0 5px 18px #0002;transition:.3s}
+.card:hover{transform:translateY(-7px) rotateX(2deg)}
+.card img{width:100%;height:175px;object-fit:cover}
+.card-body{padding:18px}
+.card h3{color:#075b91;margin-bottom:10px}
+.card p{margin:7px 0;font-size:14px}
+.fee{color:#07864b;font-weight:bold;font-size:18px}
+.section-blue{background:#e5f1fa}
+input,select,textarea{width:100%;padding:11px;border:1px solid #ccd6e0;border-radius:6px;margin:7px 0 13px;font-size:14px}
+label{font-weight:bold;font-size:14px}
+form{max-width:850px;margin:auto;background:white;padding:25px;border-radius:13px;box-shadow:0 5px 20px #0001}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;transition:.3s}
+.gallery img:hover{transform:scale(1.04)}
+.notice{background:white;border-left:5px solid var(--blue);padding:15px;margin:12px 0;border-radius:6px}
+.login-tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.login-box{max-width:550px;margin:auto}
+.dashboard{display:none;background:white;padding:22px;border-radius:12px;margin-top:20px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin:15px 0;min-width:550px}
+th,td{border:1px solid #ddd;padding:10px;text-align:left;font-size:13px}
+th{background:#075b91;color:white}
+.stat{background:#e8f4ff;padding:18px;border-radius:10px;text-align:center}
+.stat h2{color:#075b91}
+.idcard{border:3px solid #075b91;border-radius:12px;padding:20px;max-width:330px;margin:15px auto;background:#f3f9ff;text-align:center;line-height:1.8}
+.idcard img{width:75px;height:85px;object-fit:cover;border-radius:5px}
+footer{background:var(--navy);color:white;text-align:center;padding:30px;line-height:2}
+.small{font-size:12px;color:#68798a}
+.hidden{display:none}
+@media(max-width:600px){
+header{flex-direction:column;text-align:center}
+header h1{font-size:20px}
+.hero h2{font-size:28px}
+.form-grid{grid-template-columns:1fr}
+nav{gap:12px}
+nav a{font-size:12px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img class="logo" src="https://images.unsplash.com/photo-1562774053-701939374585?w=200" alt="College">
+<div>
+<h1>NAJIBABAD DEGREE COLLEGE</h1>
+<p>Gagipur, Bhagwan Nagina Road, Bijnor (UP) 246762</p>
+<p>Affiliated to M.J.P.R.U. University, Bareilly</p>
+</div>
+</header>
+
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#courses">COURSES</a>
+<a href="#departments">DEPARTMENTS</a>
+<a href="#faculty">FACULTY</a>
+<a href="#admission">ADMISSION</a>
+<a href="#gallery">GALLERY</a>
+<a href="#facilities">FACILITIES</a>
+<a href="#notices">NOTICE</a>
+<a href="#login">LOGIN</a>
+<a href="#contact">CONTACT</a>
+</nav>
+
+<div class="marquee">
+<span>★ WELCOME TO NAJIBABAD DEGREE COLLEGE ★ ONLINE ADMISSION OPEN ★ BUILD YOUR BRIGHT FUTURE ★ QUALITY EDUCATION ★</span>
+</div>
+
+<!-- HOME -->
+<section class="hero" id="home">
+<div class="slide active" style="background-image:linear-gradient(#001a3b88,#001a3b88),url('https://images.unsplash.com/photo-1562774053-701939374585?w=1600')"></div>
+<div class="slide" style="background-image:linear-gradient(#001a3b88,#001a3b88),url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600')"></div>
+<div class="slide" style="background-image:linear-gradient(#001a3b88,#001a3b88),url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1600')"></div>
+
+<div class="hero-content">
+<h2>Welcome To Najibabad Degree College</h2>
+<p>Education is the foundation of success.</p>
+<p>Learn Today, Lead Tomorrow.</p>
+<button class="gold" onclick="location.href='#admission'">ONLINE ADMISSION</button>
+<button onclick="location.href='#courses'">EXPLORE COURSES</button>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="heading">ABOUT OUR COLLEGE</h2>
+<div class="about">
+<h2>Welcome to Najibabad Degree College</h2>
+<p>Najibabad Degree College is committed to creating a learning environment where knowledge, discipline, creativity and confidence grow together.</p>
+<p>Our educational vision is to encourage every student to discover their potential and develop the academic and practical skills needed for a successful future.</p>
+<p>We believe that true education goes beyond textbooks. It builds character, develops independent thinking and prepares young people to contribute positively to society.</p>
+<h3>Our Vision</h3>
+<p>To inspire students through quality education, innovation, knowledge and positive values.</p>
+<h3>Our Mission</h3>
+<p>To provide an encouraging academic environment that supports intellectual growth, practical learning and personal development.</p>
+<h3>Our Commitment</h3>
+<p>We aim to promote curiosity, responsibility, teamwork and lifelong learning among our students.</p>
+</div>
+</section>
+
+<!-- COURSES -->
+<section id="courses" class="section-blue">
+<h2 class="heading">OUR COURSES</h2>
+<div class="grid" id="courseList"></div>
+</section>
+
+<!-- DEPARTMENTS -->
+<section id="departments">
+<h2 class="heading">OUR DEPARTMENTS</h2>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700"><div class="card-body"><h3>Principal Office</h3><p>Academic administration and college leadership.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=700"><div class="card-body"><h3>Teacher Office</h3><p>Faculty planning and academic coordination.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700"><div class="card-body"><h3>Staff Room</h3><p>Staff workspace and coordination.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700"><div class="card-body"><h3>Reception Cabin</h3><p>Student and visitor assistance.</p></div></div>
+</div>
+</section>
+
+<!-- FACULTY -->
+<section id="faculty" class="section-blue">
+<h2 class="heading">OUR FACULTY</h2>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=700"><div class="card-body"><h3>CP Sir</h3><p><b>Department:</b> Chemistry</p><p><b>Subject:</b> Chemistry Teaching</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=700"><div class="card-body"><h3>Darpan Sir</h3><p><b>Department:</b> Science</p><p><b>Subjects:</b> Botany, Zoology, B.Sc.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=700"><div class="card-body"><h3>Pooja Ma'am</h3><p><b>Subject:</b> Mathematics</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=700"><div class="card-body"><h3>Ayush Sir</h3><p><b>Subject:</b> Hindi</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700"><div class="card-body"><h3>Vikul Sir</h3><p><b>Department:</b> Pharmacy</p><p><b>Subject:</b> D.Pharma</p></div></div>
+</div>
+<p class="small">Teacher photos are sample images. Replace with actual faculty photographs and verified qualifications.</p>
+</section>
+
+<!-- ADMISSION -->
+<section id="admission">
+<h2 class="heading">ONLINE ADMISSION FORM</h2>
+<form id="admissionForm">
+<div class="form-grid">
+<div><label>Student Name</label><input id="sname" required></div>
+<div><label>Course</label><select id="scourse" required>
+<option value="">Select Course</option>
+<option>B.Sc.</option><option>B.A.</option><option>B.Com.</option><option>D.Pharma</option><option>B.Pharma</option>
+</select></div>
+<div><label>Father Name</label><input id="father" required></div>
+<div><label>Mother Name</label><input id="mother" required></div>
+<div><label>Date of Birth</label><input id="dob" type="date" required></div>
+<div><label>Admission Year</label><input id="year" type="number" value="2026" required></div>
+<div><label>Mobile Number</label><input id="mobile" type="tel" pattern="[0-9]{10}" required></div>
+<div><label>Gmail</label><input id="email" type="email" required></div>
+<div><label>State</label><input id="state" value="Uttar Pradesh" required></div>
+<div><label>District</label><input id="district" value="Bijnor" required></div>
+<div><label>Village</label><input id="village" required></div>
+<div><label>Pincode</label><input id="pin" pattern="[0-9]{6}" required></div>
+<div><label>Category</label><select id="category" required><option value="">Select</option><option>General</option><option>OBC</option><option>SC</option><option>ST</option></select></div>
+<div><label>Student Photo</label><input id="photo" type="file" accept="image/*"></div>
+</div>
+<button type="submit">SUBMIT ADMISSION</button>
+<p id="admissionMsg"></p>
+<p class="small">This demo stores submitted details in this browser only. Do not enter real sensitive student data in a public demo.</p>
+</form>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section-blue">
+<h2 class="heading">COLLEGE PHOTO GALLERY</h2>
+<div class="grid gallery">
+<img src="https://images.unsplash.com/photo-1562774053-701939374585?w=700" alt="College campus">
+<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700" alt="Students">
+<img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=700" alt="Library">
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700" alt="Classroom">
+<img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=700" alt="Laboratory">
+<img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=700" alt="Education">
+</div>
+</section>
+
+<!-- FACILITIES -->
+<section id="facilities">
+<h2 class="heading">LABORATORIES & FACILITIES</h2>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=700"><div class="card-body"><h3>Botany Lab</h3><p>Plant science and botanical learning.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=700"><div class="card-body"><h3>Zoology Lab</h3><p>Animal science and biological studies.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1581093458791-9d42e3c3c1e0?w=700"><div class="card-body"><h3>Chemistry Lab</h3><p>Practical chemistry learning.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=700"><div class="card-body"><h3>Physics Lab</h3><p>Experiments and scientific learning.</p></div></div>
+</div>
+</section>
+
+<!-- NOTICE BOARD -->
+<section id="notices" class="section-blue">
+<h2 class="heading">NOTICE BOARD</h2>
+<div id="noticeList"></div>
+</section>
+
+<!-- LOGIN -->
+<section id="login">
+<h2 class="heading">LOGIN PORTAL</h2>
+<div class="login-tabs">
+<button onclick="showLogin('admin')">ADMIN LOGIN</button>
+<button onclick="showLogin('student')">STUDENT LOGIN</button>
+<button onclick="showLogin('teacher')">TEACHER LOGIN</button>
+</div>
+
+<div class="login-box panel">
+<h3 id="loginTitle">Admin Login</h3>
+<label>Username / Student ID</label>
+<input id="loginUser" placeholder="Enter username or ID">
+<label>Password / Date of Birth</label>
+<input id="loginPass" type="password" placeholder="Enter password">
+<button onclick="login()">LOGIN</button>
+<p id="loginMsg"></p>
+<p class="small">Demo Admin: admin / College@123</p>
+<p class="small">Demo Teacher: teacher / Teacher@123</p>
+<p class="small">Student: Use Admission ID and Date of Birth (YYYY-MM-DD).</p>
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<div id="adminDash" class="dashboard">
+<h2>ADMIN DASHBOARD</h2>
+<div class="grid">
+<div class="stat"><h2 id="totalStudents">0</h2>Students</div>
+<div class="stat"><h2 id="totalFees">₹0</h2>Fees Collected</div>
+<div class="stat"><h2 id="dueFees">₹0</h2>Fees Due</div>
+</div>
+<h3>Student Records</h3>
+<table><thead><tr><th>ID</th><th>Name</th><th>Course</th><th>Mobile</th><th>Fee Paid</th><th>Fee Due</th></tr></thead><tbody id="studentRows"></tbody></table>
+
+<h3>Fees Management</h3>
+<label>Student ID</label><select id="feeStudent"></select>
+<label>Deposit Amount (₹)</label><input id="feeAmount" type="number" min="1">
+<button onclick="depositFee()">UPDATE STUDENT FEE</button>
+<p id="feeMsg"></p>
+
+<h3>Teacher Salary Management</h3>
+<label>Teacher</label><select id="salaryTeacher"><option>CP Sir</option><option>Darpan Sir</option><option>Pooja Ma'am</option><option>Ayush Sir</option><option>Vikul Sir</option></select>
+<label>Salary Paid (₹)</label><input id="salaryAmount" type="number" min="1">
+<button onclick="depositSalary()">UPDATE SALARY</button>
+<div id="salaryRecords"></div>
+
+<h3>Attendance Management</h3>
+<label>Student ID</label><select id="attendanceStudent"></select>
+<label>Attendance Date</label><input type="date" id="attendanceDate">
+<label>Status</label><select id="attendanceStatus"><option>Present</option><option>Absent</option></select>
+<button onclick="markAttendance()">SAVE ATTENDANCE</button>
+<div id="attendanceRecords"></div>
+
+<h3>Notice Management</h3>
+<input id="newNotice" placeholder="Write new college notice">
+<button onclick="addNotice()">PUBLISH NOTICE</button>
+<button onclick="logout()">LOGOUT</button>
+</div>
+
+<!-- STUDENT DASHBOARD -->
+<div id="studentDash" class="dashboard">
+<h2>STUDENT DASHBOARD</h2>
+<div id="studentDetails"></div>
+<button onclick="logout()">LOGOUT</button>
+</div>
+
+<!-- TEACHER DASHBOARD -->
+<div id="teacherDash" class="dashboard">
+<h2>TEACHER DASHBOARD</h2>
+<div id="teacherDetails"></div>
+<button onclick="logout()">LOGOUT</button>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-blue">
+<h2 class="heading">CONTACT US</h2>
+<div class="about">
+<h3>NAJIBABAD DEGREE COLLEGE</h3>
+<p><b>Address:</b> Gagipur, Bhagwan Nagina Road, Bijnor (UP) 246762</p>
+<p><b>Phone:</b> 9045491134</p>
+<p><b>University:</b> M.J.P.R.U. University, Bareilly</p>
+<p><b>Courses:</b> B.Sc., B.A., B.Com., D.Pharma, B.Pharma</p>
+<a class="btn" href="tel:9045491134">CALL COLLEGE</a>
+<a class="btn" href="https://wa.me/919045491134" target="_blank">WHATSAPP</a>
+</div>
+</section>
+
+<footer>
+<h2>NAJIBABAD DEGREE COLLEGE</h2>
+<p>Education | Knowledge | Success</p>
+<p>Gagipur, Bhagwan Nagina Road, Bijnor (UP) 246762</p>
+<p>Affiliated to M.J.P.R.U. University, Bareilly</p>
+<p>Contact: 9045491134</p>
+<p>© 2026 Najibabad Degree College</p>
+</footer>
+
+<script>
+const courses = [
+ {name:"B.Sc.",detail:"Bachelor of Science",duration:"3 Years",fee:6000},
+ {name:"B.A.",detail:"Bachelor of Arts",duration:"3 Years",fee:3000},
+ {name:"B.Com.",detail:"Bachelor of Commerce",duration:"3 Years",fee:40000},
+ {name:"D.Pharma",detail:"Diploma in Pharmacy",duration:"2 Years",fee:60000},
+ {name:"B.Pharma",detail:"Bachelor of Pharmacy",duration:"4 Years",fee:100000}
+];
+
+const teachers = ["CP Sir","Darpan Sir","Pooja Ma'am","Ayush Sir","Vikul Sir"];
+let currentRole = "admin";
+let loggedStudent = null;
+
+function read(key, fallback) {
+ try { return JSON.parse(localStorage.getItem(key)) || fallback; }
+ catch(e) { return fallback; }
+}
+function save(key, value) {
+ localStorage.setItem(key, JSON.stringify(value));
+}
+
+let students = read("ndc_students",[]);
+let notices = read("ndc_notices",[
+ "Welcome to Najibabad Degree College.",
+ "Students are requested to check admission updates.",
+ "Please contact the college office for course information."
+]);
+let salaries = read("ndc_salaries",{});
+let attendance = read("ndc_attendance",[]);
+
+function renderCourses(){
+ document.getElementById("courseList").innerHTML=courses.map(c=>`
+ <div class="card"><div class="card-body">
+ <h3>${c.name}</h3><p>${c.detail}</p>
+ <p><b>Duration:</b> ${c.duration}</p>
+ <p class="fee">Fees: ₹${c.fee.toLocaleString("en-IN")}</p>
+ <button onclick="selectCourse('${c.name}')">Apply Now</button>
+ </div></div>`).join("");
+}
+function selectCourse(name){
+ document.getElementById("scourse").value=name;
+ location.hash="admission";
+}
+function renderNotices(){
+ document.getElementById("noticeList").innerHTML=notices.map(n=>`<div class="notice">📢 ${escapeHTML(n)}</div>`).join("");
+}
+function escapeHTML(s){
+ return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+document.getElementById("admissionForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const file=document.getElementById("photo").files[0];
+ const createRecord=(photoData)=>{
+ const course=document.getElementById("scourse").value;
+ const fee=courses.find(c=>c.name===course).fee;
+ const id="NDC2026"+String(Date.now()).slice(-5);
+ const s={
+ id,name:document.getElementById("sname").value,
+ course,father:document.getElementById("father").value,
+ mother:document.getElementById("mother").value,
+ dob:document.getElementById("dob").value,
+ year:document.getElementById("year").value,
+ mobile:document.getElementById("mobile").value,
+ email:document.getElementById("email").value,
+ state:document.getElementById("state").value,
+ district:document.getElementById("district").value,
+ village:document.getElementById("village").value,
+ pin:document.getElementById("pin").value,
+ category:document.getElementById("category").value,
+ photo:photoData||"",fee,paid:0
+ };
+ students=read("ndc_students",[]);
+ students.push(s);
+ save("ndc_students",students);
+ document.getElementById("admissionMsg").innerHTML=
+ "Application saved in this browser. Your Demo Admission ID is: <b>"+id+"</b>. Keep this ID and your Date of Birth for student login.";
+ this.reset();
+ };
+ if(file){
+ if(file.size>500000){alert("Please choose a photo smaller than 500 KB.");return;}
+ const reader=new FileReader();
+ reader.onload=()=>createRecord(reader.result);
+ reader.readAsDataURL(file);
+ }else createRecord("");
+});
+
+function showLogin(role){
+ currentRole=role;
+ document.getElementById("loginTitle").textContent=role.toUpperCase()+" LOGIN";
+ document.getElementById("loginUser").value="";
+ document.getElementById("loginPass").value="";
+ document.getElementById("loginMsg").textContent="";
+}
+function hideDashboards(){
+ ["adminDash","studentDash","teacherDash"].forEach(id=>document.getElementById(id).style.display="none");
+}
+function login(){
+ const u=document.getElementById("loginUser").value.trim();
+ const p=document.getElementById("loginPass").value;
+ const msg=document.getElementById("loginMsg");
+ hideDashboards();
+
+ if(currentRole==="admin"){
+ if(u==="admin"&&p==="College@123"){
+ showAdmin();return;
+ }
+ }
+ if(currentRole==="teacher"){
+ if(u==="teacher"&&p==="Teacher@123"){
+ showTeacher();return;
+ }
+ }
+ if(currentRole==="student"){
+ const s=students.find(x=>x.id===u&&x.dob===p);
+ if(s){loggedStudent=s;showStudent();return;}
+ }
+ msg.textContent="Invalid login details. Please try again.";
+ msg.style.color="red";
+}
+function showAdmin(){
+ const dash=document.getElementById("adminDash");
+ dash.style.display="block";
+ const paid=students.reduce((a,s)=>a+s.paid,0);
+ const due=students.reduce((a,s)=>a+(s.fee-s.paid),0);
+ document.getElementById("totalStudents").textContent=students.length;
+ document.getElementById("totalFees").textContent="₹"+paid.toLocaleString("en-IN");
+ document.getElementById("dueFees").textContent="₹"+due.toLocaleString("en-IN");
+ document.getElementById("studentRows").innerHTML=students.map(s=>`
+ <tr><td>${s.id}</td><td>${escapeHTML(s.name)}</td><td>${s.course}</td>
+ <td>${s.mobile}</td><td>₹${s.paid}</td><td>₹${s.fee-s.paid}</td></tr>`).join("");
+ const opts=students.map(s=>`<option value="${s.id}">${s.id} - ${escapeHTML(s.name)}</option>`).join("");
+ document.getElementById("feeStudent").innerHTML=opts;
+ document.getElementById("attendanceStudent").innerHTML=opts;
+ document.getElementById("salaryRecords").innerHTML=teachers.map(t=>`<p>${t}: Paid ₹${salaries[t]||0}</p>`).join("");
+ document.getElementById("attendanceRecords").innerHTML=attendance.map(a=>`<p>${a.id} | ${a.date} | ${a.status}</p>`).join("");
+}
+function depositFee(){
+ const id=document.getElementById("feeStudent").value;
+ const amount=Number(document.getElementById("feeAmount").value);
+ const s=students.find(x=>x.id===id);
+ if(!s||!Number.isFinite(amount)||amount<=0){alert("Enter a valid student and amount.");return;}
+ if(amount>s.fee-s.paid){alert("Amount cannot exceed the remaining fee.");return;}
+ s.paid+=amount;
+ save("ndc_students",students);
+ document.getElementById("feeMsg").textContent="Fee updated. New due: ₹"+(s.fee-s.paid);
+ showAdmin();
+}
+function depositSalary(){
+ const t=document.getElementById("salaryTeacher").value;
+ const amount=Number(document.getElementById("salaryAmount").value);
+ if(!Number.isFinite(amount)||amount<=0){alert("Enter a valid salary amount.");return;}
+ salaries[t]=(salaries[t]||0)+amount;
+ save("ndc_salaries",salaries);
+ showAdmin();
+}
+function markAttendance(){
+ const id=document.getElementById("attendanceStudent").value;
+ const date=document.getElementById("attendanceDate").value;
+ const status=document.getElementById("attendanceStatus").value;
+ if(!id||!date){alert("Select a student and date.");return;}
+ attendance.push({id,date,status});
+ save("ndc_attendance",attendance);
+ showAdmin();
+}
+function addNotice(){
+ const value=document.getElementById("newNotice").value.trim();
+ if(!value)return;
+ notices.unshift(value);
+ save("ndc_notices",notices);
+ document.getElementById("newNotice").value="";
+ renderNotices();
+}
+function showStudent(){
+ const s=loggedStudent;
+ const due=s.fee-s.paid;
+ document.getElementById("studentDash").style.display="block";
+ document.getElementById("studentDetails").innerHTML=`
+ <h3>Welcome, ${escapeHTML(s.name)}</h3>
+ <p><b>Admission ID:</b> ${s.id}</p>
+ <p><b>Course:</b> ${s.course}</p>
+ <p><b>Admission Year:</b> ${s.year}</p>
+ <p><b>Father:</b> ${escapeHTML(s.father)}</p>
+ <p><b>Mother:</b> ${escapeHTML(s.mother)}</p>
+ <p><b>Date of Birth:</b> ${s.dob}</p>
+ <p><b>Mobile:</b> ${s.mobile}</p>
+ <p><b>Address:</b> ${escapeHTML(s.village)}, ${escapeHTML(s.district)}</p>
+ <p><b>Total Fees:</b> ₹${s.fee}</p>
+ <p><b>Fees Deposited:</b> ₹${s.paid}</p>
+ <p><b>Fees Due:</b> ₹${due}</p>
+ <div class="idcard"><h3>NAJIBABAD DEGREE COLLEGE</h3>
+ <img src="${s.photo||'https://via.placeholder.com/75x85?text=Photo'}">
+ <p><b>${escapeHTML(s.name)}</b></p><p>ID: ${s.id}</p>
+ <p>Course: ${s.course}</p><p>Year: ${s.year}</p></div>
+ <button onclick="window.print()">PRINT STUDENT DETAILS / ID CARD</button>`;
+}
+function showTeacher(){
+ document.getElementById("teacherDash").style.display="block";
+ document.getElementById("teacherDetails").innerHTML=teachers.map(t=>`
+ <div class="panel"><h3>${t}</h3>
+ <p>Salary deposited: ₹${salaries[t]||0}</p>
+ <p>Salary due: Contact administration to configure salary.</p>
+ <p>Teacher ID: NDC-T-${teachers.indexOf(t)+1}</p></div>`).join("");
+}
+function logout(){
+ hideDashboards();
+ loggedStudent=null;
+ document.getElementById("loginUser").value="";
+ document.getElementById("loginPass").value="";
+ document.getElementById("loginMsg").textContent="You have logged out.";
+}
+let slideIndex=0;
+setInterval(()=>{
+ const slides=document.querySelectorAll(".slide");
+ slides[slideIndex].classList.remove("active");
+ slideIndex=(slideIndex+1)%slides.length;
+ slides[slideIndex].classList.add("active");
+},4000);
+
+renderCourses();
+renderNotices();
+showLogin("admin");
+</script>
+</body>
+</html>
+```
